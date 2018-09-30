@@ -1,0 +1,16 @@
+[0m[[0m[0minfo[0m] [0m[0mLoading project definition from /users/kc92/cs744-a1/sort/project[0m
+[0m[[0m[0minfo[0m] [0m[0mLoading settings for project sort from build.sbt ...[0m
+[0m[[0m[0minfo[0m] [0m[0mSet current project to Sort Project (in build file:/users/kc92/cs744-a1/sort/)[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 0 s, completed Sep 29, 2018 5:56:46 PM[0m
+[0m[[0m[0minfo[0m] [0m[0mLoading project definition from /users/kc92/cs744-a1/sort/project[0m
+[0m[[0m[0minfo[0m] [0m[0mLoading settings for project sort from build.sbt ...[0m
+[0m[[0m[0minfo[0m] [0m[0mSet current project to Sort Project (in build file:/users/kc92/cs744-a1/sort/)[0m
+[0m[[0m[0minfo[0m] [0m[0mUpdating ...[0m
+[0m[[0m[0minfo[0m] [0m[0mDone updating.[0m
+[0m[[0m[33mwarn[0m] [0m[0mThere may be incompatibilities among your library dependencies.[0m
+[0m[[0m[33mwarn[0m] [0m[0mRun 'evicted' to see detailed eviction warnings[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 1 Scala source to /users/kc92/cs744-a1/sort/target/scala-2.11/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mDone compiling.[0m
+[0m[[0m[0minfo[0m] [0m[0mPackaging /users/kc92/cs744-a1/sort/target/scala-2.11/sort-project_2.11-1.0.jar ...[0m
+[0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 11 s, completed Sep 29, 2018 5:57:06 PM[0m
