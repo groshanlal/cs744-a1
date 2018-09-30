@@ -1,5 +1,6 @@
 #!/bin/bash
 DIR=~/cs744-a1/sort
+cd $DIR
 sbt clean
 sbt package
 export SPARK_HOME=~/spark-2.2.0-bin-hadoop2.7

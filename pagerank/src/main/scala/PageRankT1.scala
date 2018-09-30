@@ -7,7 +7,7 @@ object PageRankT1{
         println(s"Page rank task 1 running")
 
         val separator = "\t"
-        val lines = spark.read.textFile("hdfs://128.104.222.128:9000/user/input/web-BerkStan.txt")
+        val lines = spark.read.textFile(args(0))
             .filter{ line => 
                 val keep = false
                 if (line.startsWith("Category:")
