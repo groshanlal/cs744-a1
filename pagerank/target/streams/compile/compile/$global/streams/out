@@ -1,0 +1,7 @@
+[0m[[0m[31merror[0m] [0m[0m/users/kc92/cs744-a1/pagerank/src/main/scala/PageRankT2.scala:15:51: not found: type HashPartitioner[0m
+[0m[[0m[31merror[0m] [0m[0m        }.distinct().groupByKey().partitionBy(new HashPartitioner(10))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/kc92/cs744-a1/pagerank/src/main/scala/PageRankT3.scala:15:51: not found: type HashPartitioner[0m
+[0m[[0m[31merror[0m] [0m[0m        }.distinct().groupByKey().partitionBy(new HashPartitioner(10)).cache()[0m
+[0m[[0m[31merror[0m] [0m[0m                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
