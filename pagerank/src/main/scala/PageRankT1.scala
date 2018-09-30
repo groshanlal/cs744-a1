@@ -8,7 +8,12 @@ object PageRankT1{
 
         val separator = "\t"
         val lines = spark.read.textFile("hdfs://128.104.222.128:9000/user/input/web-BerkStan.txt")
-            .filter( line => !(line.contains("#")) ).rdd
+            .filter{ line => 
+                val keep = false
+                if (line.startsWith("Category:")
+                (line.startsWith("Category:"))
+                keep
+            }.map(line => line.toLowerCase).rdd
         val data = lines.map{ s =>
             val parts = s.split(separator)
             (parts(0), parts(1))
