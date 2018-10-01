@@ -1,35 +1,56 @@
 import org.apache.spark.sql.SparkSession
+import org.apache.spark.SparkContext
+import org.apache.spark.SparkConf
+//import org.apache.spark.implicits._
+import org.apache.spark.sql.types.StructType
 
 object PageRankT1{
-    def main(args: Array[String]) {
-        val spark = SparkSession.builder.appName("Page Rank Task 1").getOrCreate()
+    def printType[T](x:T) :Unit = {println(x.getClass.toString())}
 
+    def main(args: Array[String]) {
+        val spark = SparkSession.builder
+            .appName("Page Rank Task 1")
+            .config("spark.driver.memory", "32g")
+            .config("spark.local.dir", "/data/tmp")
+            .config("spark.task.cpus", "10")
+            .config("spark.executor.memory", "32g")
+            .config("spark.eventLog.enabled", "true")
+            .config("spark.eventLog.dir", "/data/spark-logs")
+            .getOrCreate()
+
+        import spark.implicits._
         println(s"Page rank task 1 running")
 
         val separator = "\t"
-        val lines = spark.read.textFile(args(0))
+
+        val lines = spark.read.textFile(args(0)).map(_.toLowerCase)
+        	.filter{ line => 
+                (line.contains("\tcategory:") || line.contains("\tCategory:") || !(line.contains(":"))) 
+            }
             .filter{ line => 
-                val keep = false
-                if (line.startsWith("Category:")
-                (line.startsWith("Category:"))
-                keep
-            }.map(line => line.toLowerCase).rdd
+                (line.split("\t").size == 2)
+            }.rdd
+        //lines.saveAsTextFile(args(1))
+        
+        
         val data = lines.map{ s =>
             val parts = s.split(separator)
             (parts(0), parts(1))
         }.distinct().groupByKey()
         var ranks = data.mapValues(v => 1.0)
 
-        for (i <- 1 to 10) {
+        for (i <- 1 to 2) {
             val pageContributions = data.join(ranks).values.flatMap{ case (urls, rank) =>
                 val size = urls.size
                 urls.map(url => (url, rank / size))
             }
             ranks = pageContributions.reduceByKey(_+_).mapValues(0.15 + 0.85 * _)
+            println(s"Page rank iteration $i running")
         }
+        
 
-        ranks.saveAsTextFile("hdfs://128.104.222.128:9000/user/output/pr1")
-
+        ranks.saveAsTextFile(args(1))
+		
         spark.stop()
     }
 }
