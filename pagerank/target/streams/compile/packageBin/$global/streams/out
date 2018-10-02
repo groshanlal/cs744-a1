@@ -2,6 +2,8 @@
 [0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	PageRankT1$$anonfun$main$1$$anonfun$6.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /users/kc92/cs744-a1/pagerank/target/scala-2.11/classes/PageRankT1$$anonfun$main$1$$anonfun$6.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PageRankT2$$anonfun$main$1$$anonfun$6$$anonfun$apply$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /users/kc92/cs744-a1/pagerank/target/scala-2.11/classes/PageRankT2$$anonfun$main$1$$anonfun$6$$anonfun$apply$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	PageRankT1$$anonfun$main$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /users/kc92/cs744-a1/pagerank/target/scala-2.11/classes/PageRankT1$$anonfun$main$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	PageRankT3$$anonfun$main$1$$anonfun$apply$mcVI$sp$2.class[0m
@@ -18,6 +20,8 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /users/kc92/cs744-a1/pagerank/target/scala-2.11/classes/PageRankT1$$anonfun$main$1$$anonfun$6$$anonfun$apply$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	PageRankT3$$anonfun$5.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /users/kc92/cs744-a1/pagerank/target/scala-2.11/classes/PageRankT3$$anonfun$5.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PageRankT2$$anonfun$5.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /users/kc92/cs744-a1/pagerank/target/scala-2.11/classes/PageRankT2$$anonfun$5.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	PageRankT1$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /users/kc92/cs744-a1/pagerank/target/scala-2.11/classes/PageRankT1$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	PageRankT2.class[0m
@@ -30,16 +34,12 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /users/kc92/cs744-a1/pagerank/target/scala-2.11/classes/PageRankT3$$anonfun$4.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	PageRankT1$$anonfun$main$1$$anonfun$apply$mcVI$sp$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /users/kc92/cs744-a1/pagerank/target/scala-2.11/classes/PageRankT1$$anonfun$main$1$$anonfun$apply$mcVI$sp$2.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	PageRankT2$$anonfun$main$1$$anonfun$4$$anonfun$apply$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /users/kc92/cs744-a1/pagerank/target/scala-2.11/classes/PageRankT2$$anonfun$main$1$$anonfun$4$$anonfun$apply$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	PageRankT2$$anonfun$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /users/kc92/cs744-a1/pagerank/target/scala-2.11/classes/PageRankT2$$anonfun$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	PageRankT3$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /users/kc92/cs744-a1/pagerank/target/scala-2.11/classes/PageRankT3$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	PageRankT1$$anonfun$5.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /users/kc92/cs744-a1/pagerank/target/scala-2.11/classes/PageRankT1$$anonfun$5.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	PageRankT2$$anonfun$main$1$$anonfun$4.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /users/kc92/cs744-a1/pagerank/target/scala-2.11/classes/PageRankT2$$anonfun$main$1$$anonfun$4.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	PageRankT2$$anonfun$3.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /users/kc92/cs744-a1/pagerank/target/scala-2.11/classes/PageRankT2$$anonfun$3.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	PageRankT3$$anonfun$1.class[0m
@@ -54,8 +54,12 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /users/kc92/cs744-a1/pagerank/target/scala-2.11/classes/PageRankT1$$anonfun$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	PageRankT3$$anonfun$main$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /users/kc92/cs744-a1/pagerank/target/scala-2.11/classes/PageRankT3$$anonfun$main$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PageRankT2$$anonfun$main$1$$anonfun$6.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /users/kc92/cs744-a1/pagerank/target/scala-2.11/classes/PageRankT2$$anonfun$main$1$$anonfun$6.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	PageRankT3$$anonfun$3.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /users/kc92/cs744-a1/pagerank/target/scala-2.11/classes/PageRankT3$$anonfun$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PageRankT2$$anonfun$4.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /users/kc92/cs744-a1/pagerank/target/scala-2.11/classes/PageRankT2$$anonfun$4.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	PageRankT2$$anonfun$main$1$$anonfun$apply$mcVI$sp$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /users/kc92/cs744-a1/pagerank/target/scala-2.11/classes/PageRankT2$$anonfun$main$1$$anonfun$apply$mcVI$sp$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	PageRankT3$$anonfun$main$1$$anonfun$apply$mcVI$sp$1.class[0m

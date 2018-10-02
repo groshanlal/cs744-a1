@@ -1,7 +1,6 @@
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.SparkContext
 import org.apache.spark.SparkConf
-//import org.apache.spark.implicits._
 import org.apache.spark.sql.types.StructType
 
 object PageRankT1{
@@ -10,10 +9,10 @@ object PageRankT1{
     def main(args: Array[String]) {
         val spark = SparkSession.builder
             .appName("Page Rank Task 1")
-            .config("spark.driver.memory", "32g")
+            .config("spark.driver.memory", "100g")
             .config("spark.local.dir", "/data/tmp")
             .config("spark.task.cpus", "10")
-            .config("spark.executor.memory", "32g")
+            .config("spark.executor.memory", "100g")
             .config("spark.eventLog.enabled", "true")
             .config("spark.eventLog.dir", "/data/spark-logs")
             .getOrCreate()
@@ -23,15 +22,10 @@ object PageRankT1{
 
         val separator = "\t"
 
-        val lines = spark.read.textFile(args(0)).map(_.toLowerCase)
-        	.filter{ line => 
-                (line.contains("\tcategory:") || line.contains("\tCategory:") || !(line.contains(":"))) 
-            }
+        val lines = spark.read.textFile(args(0))
             .filter{ line => 
-                (line.split("\t").size == 2)
+                (!line.contains("#")) 
             }.rdd
-        //lines.saveAsTextFile(args(1))
-        
         
         val data = lines.map{ s =>
             val parts = s.split(separator)
@@ -39,7 +33,7 @@ object PageRankT1{
         }.distinct().groupByKey()
         var ranks = data.mapValues(v => 1.0)
 
-        for (i <- 1 to 2) {
+        for (i <- 1 to 10) {
             val pageContributions = data.join(ranks).values.flatMap{ case (urls, rank) =>
                 val size = urls.size
                 urls.map(url => (url, rank / size))
